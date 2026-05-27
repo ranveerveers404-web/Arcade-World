@@ -8,118 +8,303 @@
   <link rel="apple-touch-icon" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-glow"></div>
-  <header class="hero">
+  <div class="sky-glow sky-glow-left"></div>
+  <div class="sky-glow sky-glow-right"></div>
+
+  <header class="hero-shell">
     <nav class="topbar">
-      <div class="brand">ARC WORLD</div>
-      <a class="pill-link" href="#arcade">Play Now</a>
+      <a class="brand-mark" href="#top">
+        <span class="brand-stack">ARC<br>WORLD</span>
+      </a>
+      <div class="top-links">
+        <a href="#games">Games</a>
+        <a href="#arcade">Arcade</a>
+        <a href="#leaderboard">Leaderboard</a>
+      </div>
+      <a class="nav-cta" href="#arcade">Play Now</a>
     </nav>
 
-    <div class="hero-copy">
-      <p class="eyebrow">RETRO WEB ARCADE</p>
-      <h1>Simple games.<br>Big arcade energy.</h1>
-      <p class="intro">
-        Jump into tiny browser classics inspired by old-school cabinets:
-        paddle battles, neon street dodging, and space blaster chaos.
-      </p>
-      <div class="hero-actions">
-        <a class="primary-btn" href="#arcade">Start Playing</a>
-        <a class="secondary-btn" href="#games">See Games</a>
+    <section class="hero-grid" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">RETRO WEB ARCADE</p>
+        <h1>Play neon arcade games from one bright, chaotic launcher.</h1>
+        <p class="hero-text">
+          Inspired by classic cabinets and the reference style you shared, Arc World now packs
+          racing, mazes, brick-smashing, shooters, and pong into one glossy portal.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#arcade">Start Arcade</a>
+          <a class="secondary-btn" href="#leaderboard">View Highscores</a>
+        </div>
+        <div class="stat-row">
+          <article class="stat-card">
+            <strong>5</strong>
+            <span>Playable games</span>
+          </article>
+          <article class="stat-card">
+            <strong>Fullscreen</strong>
+            <span>Every cabinet</span>
+          </article>
+          <article class="stat-card">
+            <strong id="leaderboardModeBadge">Local Mode</strong>
+            <span>Leaderboard status</span>
+          </article>
+        </div>
       </div>
-    </div>
 
-    <section class="feature-strip" id="games">
-      <article class="feature-card">
-        <span class="feature-icon">01</span>
-        <h2>Pong</h2>
-        <p>Bounce, rally, and outlast the CPU in a sharp little paddle duel.</p>
-      </article>
-      <article class="feature-card">
-        <span class="feature-icon">02</span>
-        <h2>Racing</h2>
-        <p>Weave between traffic in a simple endless racer with rising speed.</p>
-      </article>
-      <article class="feature-card">
-        <span class="feature-icon">03</span>
-        <h2>Shooter</h2>
-        <p>Blast falling invaders before they flood the bottom of the screen.</p>
-      </article>
+      <aside class="hero-showcase">
+        <div class="showcase-grid">
+          <article class="showcase-card pink-card">
+            <span>MAZE RUN</span>
+            <p>Collect neon orbs without hitting your own trail.</p>
+          </article>
+          <article class="showcase-card blue-card">
+            <span>STAR HUNTER</span>
+            <p>Clear falling enemies before the sky collapses.</p>
+          </article>
+          <article class="showcase-card amber-card">
+            <span>BRICK SMASH</span>
+            <p>Pop every glowing tile in the lane.</p>
+          </article>
+          <article class="showcase-card sunset-card">
+            <span>NEON RACER</span>
+            <p>Thread through traffic and keep the speed alive.</p>
+          </article>
+        </div>
+      </aside>
     </section>
   </header>
 
-  <main id="arcade" class="arcade-grid">
-    <section class="game-panel active-panel" data-game="pong" tabindex="0">
-      <div class="panel-head">
+  <main>
+    <section class="featured-section" id="games">
+      <div class="section-head">
         <div>
-          <p class="panel-label">CABINET A</p>
+          <p class="eyebrow">FEATURED GAMES</p>
+          <h2>Five arcade cabinets, all playable right on the page.</h2>
+        </div>
+        <p class="section-copy">Click a game card to jump straight into that cabinet.</p>
+      </div>
+
+      <div class="featured-grid">
+        <article class="featured-card" data-focus-game="starhunter">
+          <div class="thumb thumb-stars"></div>
+          <h3>Star Hunter</h3>
+          <p>Shooter</p>
+          <button class="card-btn" data-focus-game="starhunter">Play Now</button>
+        </article>
+        <article class="featured-card" data-focus-game="mazerun">
+          <div class="thumb thumb-maze"></div>
+          <h3>Maze Run</h3>
+          <p>Arcade</p>
+          <button class="card-btn" data-focus-game="mazerun">Play Now</button>
+        </article>
+        <article class="featured-card" data-focus-game="bricksmash">
+          <div class="thumb thumb-bricks"></div>
+          <h3>Brick Smash</h3>
+          <p>Arcade</p>
+          <button class="card-btn" data-focus-game="bricksmash">Play Now</button>
+        </article>
+        <article class="featured-card" data-focus-game="neonracer">
+          <div class="thumb thumb-racer"></div>
+          <h3>Neon Racer</h3>
+          <p>Racing</p>
+          <button class="card-btn" data-focus-game="neonracer">Play Now</button>
+        </article>
+        <article class="featured-card" data-focus-game="pongduel">
+          <div class="thumb thumb-pong"></div>
           <h3>Pong Duel</h3>
-        </div>
-        <button class="panel-btn" data-action="pong-reset">Reset</button>
-      </div>
-      <canvas id="pongCanvas" width="420" height="280" aria-label="Pong game area"></canvas>
-      <div class="touch-controls" aria-label="Pong touch controls">
-        <button class="touch-btn" data-touch-game="pong" data-key="w">Up</button>
-        <button class="touch-btn" data-touch-game="pong" data-key="s">Down</button>
-      </div>
-      <div class="panel-foot">
-        <p><strong>Controls:</strong> W and S or touch buttons</p>
-        <p id="pongStatus">First to 5 wins the set.</p>
+          <p>Classic</p>
+          <button class="card-btn" data-focus-game="pongduel">Play Now</button>
+        </article>
       </div>
     </section>
 
-    <section class="game-panel" data-game="racing" tabindex="0">
-      <div class="panel-head">
+    <section class="why-strip">
+      <article>
+        <h3>Instant Play</h3>
+        <p>No install, no loading maze. Jump in from desktop or phone.</p>
+      </article>
+      <article>
+        <h3>Fullscreen Mode</h3>
+        <p>Every cabinet can expand for a bigger play field.</p>
+      </article>
+      <article>
+        <h3>Shared Scores Ready</h3>
+        <p>Leaderboard UI is built for public backend storage when connected.</p>
+      </article>
+    </section>
+
+    <section class="arcade-section" id="arcade">
+      <div class="section-head">
         <div>
-          <p class="panel-label">CABINET B</p>
-          <h3>Night Rider</h3>
+          <p class="eyebrow">ARCADE FLOOR</p>
+          <h2>Pick a cabinet, tap fullscreen, and chase a better score.</h2>
         </div>
-        <button class="panel-btn" data-action="racing-reset">Reset</button>
+        <p class="section-copy">Use the same player name across games so your scores line up on the leaderboard.</p>
       </div>
-      <canvas id="racingCanvas" width="420" height="280" aria-label="Racing game area"></canvas>
-      <div class="touch-controls" aria-label="Racing touch controls">
-        <button class="touch-btn" data-touch-game="racing" data-key="arrowleft">Left</button>
-        <button class="touch-btn" data-touch-game="racing" data-key="arrowright">Right</button>
+
+      <div class="player-bar">
+        <label for="playerName">Player Name</label>
+        <input id="playerName" name="playerName" type="text" maxlength="16" value="ARCADE ACE">
+        <p id="leaderboardModeText">Leaderboard mode: local browser demo. Connect Supabase in the code to make it public for everyone.</p>
       </div>
-      <div class="panel-foot">
-        <p><strong>Controls:</strong> Arrow keys or touch buttons</p>
-        <p id="racingStatus">Dodge traffic and build distance.</p>
+
+      <div class="arcade-grid">
+        <section class="game-panel active-panel" id="panel-pongduel" data-game="pongduel" tabindex="0">
+          <div class="panel-head">
+            <div>
+              <p class="panel-label">CLASSIC</p>
+              <h3>Pong Duel</h3>
+            </div>
+            <div class="panel-actions">
+              <button class="panel-btn" data-action="pongduel-reset">Reset</button>
+              <button class="panel-btn" data-fullscreen="panel-pongduel">Fullscreen</button>
+            </div>
+          </div>
+          <canvas id="pongCanvas" width="500" height="320" aria-label="Pong Duel game area"></canvas>
+          <div class="touch-controls" aria-label="Pong touch controls">
+            <button class="touch-btn" data-touch-game="pongduel" data-key="w">Up</button>
+            <button class="touch-btn" data-touch-game="pongduel" data-key="s">Down</button>
+          </div>
+          <div class="panel-foot">
+            <p><strong>Controls:</strong> W / S or touch</p>
+            <p id="pongStatus">First to 5 wins the set.</p>
+          </div>
+        </section>
+
+        <section class="game-panel" id="panel-neonracer" data-game="neonracer" tabindex="0">
+          <div class="panel-head">
+            <div>
+              <p class="panel-label">RACING</p>
+              <h3>Neon Racer</h3>
+            </div>
+            <div class="panel-actions">
+              <button class="panel-btn" data-action="neonracer-reset">Reset</button>
+              <button class="panel-btn" data-fullscreen="panel-neonracer">Fullscreen</button>
+            </div>
+          </div>
+          <canvas id="racingCanvas" width="500" height="320" aria-label="Neon Racer game area"></canvas>
+          <div class="touch-controls" aria-label="Racing touch controls">
+            <button class="touch-btn" data-touch-game="neonracer" data-key="arrowleft">Left</button>
+            <button class="touch-btn" data-touch-game="neonracer" data-key="arrowright">Right</button>
+          </div>
+          <div class="panel-foot">
+            <p><strong>Controls:</strong> Left / Right or touch</p>
+            <p id="racingStatus">Dodge traffic and build distance.</p>
+          </div>
+        </section>
+
+        <section class="game-panel" id="panel-starhunter" data-game="starhunter" tabindex="0">
+          <div class="panel-head">
+            <div>
+              <p class="panel-label">SHOOTER</p>
+              <h3>Star Hunter</h3>
+            </div>
+            <div class="panel-actions">
+              <button class="panel-btn" data-action="starhunter-reset">Reset</button>
+              <button class="panel-btn" data-fullscreen="panel-starhunter">Fullscreen</button>
+            </div>
+          </div>
+          <canvas id="shooterCanvas" width="500" height="320" aria-label="Star Hunter game area"></canvas>
+          <div class="touch-controls shooter-controls" aria-label="Shooter touch controls">
+            <button class="touch-btn" data-touch-game="starhunter" data-key="arrowleft">Left</button>
+            <button class="touch-btn accent-btn" data-touch-game="starhunter" data-key=" ">Fire</button>
+            <button class="touch-btn" data-touch-game="starhunter" data-key="arrowright">Right</button>
+          </div>
+          <div class="panel-foot">
+            <p><strong>Controls:</strong> Left / Right / Space</p>
+            <p id="shooterStatus">Clear waves before they hit the floor.</p>
+          </div>
+        </section>
+
+        <section class="game-panel" id="panel-bricksmash" data-game="bricksmash" tabindex="0">
+          <div class="panel-head">
+            <div>
+              <p class="panel-label">ARCADE</p>
+              <h3>Brick Smash</h3>
+            </div>
+            <div class="panel-actions">
+              <button class="panel-btn" data-action="bricksmash-reset">Reset</button>
+              <button class="panel-btn" data-fullscreen="panel-bricksmash">Fullscreen</button>
+            </div>
+          </div>
+          <canvas id="brickCanvas" width="500" height="320" aria-label="Brick Smash game area"></canvas>
+          <div class="touch-controls" aria-label="Brick Smash touch controls">
+            <button class="touch-btn" data-touch-game="bricksmash" data-key="arrowleft">Left</button>
+            <button class="touch-btn" data-touch-game="bricksmash" data-key="arrowright">Right</button>
+          </div>
+          <div class="panel-foot">
+            <p><strong>Controls:</strong> Left / Right or touch</p>
+            <p id="brickStatus">Break every tile and keep the orb alive.</p>
+          </div>
+        </section>
+
+        <section class="game-panel" id="panel-mazerun" data-game="mazerun" tabindex="0">
+          <div class="panel-head">
+            <div>
+              <p class="panel-label">MAZE</p>
+              <h3>Maze Run</h3>
+            </div>
+            <div class="panel-actions">
+              <button class="panel-btn" data-action="mazerun-reset">Reset</button>
+              <button class="panel-btn" data-fullscreen="panel-mazerun">Fullscreen</button>
+            </div>
+          </div>
+          <canvas id="mazeCanvas" width="500" height="320" aria-label="Maze Run game area"></canvas>
+          <div class="touch-controls four-way-controls" aria-label="Maze touch controls">
+            <button class="touch-btn" data-touch-game="mazerun" data-key="arrowup">Up</button>
+            <button class="touch-btn" data-touch-game="mazerun" data-key="arrowleft">Left</button>
+            <button class="touch-btn" data-touch-game="mazerun" data-key="arrowdown">Down</button>
+            <button class="touch-btn" data-touch-game="mazerun" data-key="arrowright">Right</button>
+          </div>
+          <div class="panel-foot">
+            <p><strong>Controls:</strong> Arrow keys or touch</p>
+            <p id="mazeStatus">Eat the orbs. Don’t bite your own trail.</p>
+          </div>
+        </section>
       </div>
     </section>
 
-    <section class="game-panel" data-game="shooter" tabindex="0">
-      <div class="panel-head">
+    <section class="leaderboard-section" id="leaderboard">
+      <div class="section-head">
         <div>
-          <p class="panel-label">CABINET C</p>
-          <h3>Star Blaster</h3>
+          <p class="eyebrow">LEADERBOARD</p>
+          <h2>See who owns each cabinet.</h2>
         </div>
-        <button class="panel-btn" data-action="shooter-reset">Reset</button>
+        <button class="secondary-btn compact-btn" id="refreshLeaderboardBtn">Refresh Scores</button>
       </div>
-      <canvas id="shooterCanvas" width="420" height="280" aria-label="Shooter game area"></canvas>
-      <div class="touch-controls shooter-controls" aria-label="Shooter touch controls">
-        <button class="touch-btn" data-touch-game="shooter" data-key="arrowleft">Left</button>
-        <button class="touch-btn accent-btn" data-touch-game="shooter" data-key=" ">Fire</button>
-        <button class="touch-btn" data-touch-game="shooter" data-key="arrowright">Right</button>
-      </div>
-      <div class="panel-foot">
-        <p><strong>Controls:</strong> Left, Right, Space or touch buttons</p>
-        <p id="shooterStatus">Clear waves before they reach the floor.</p>
+
+      <div class="leaderboard-grid">
+        <section class="leaderboard-card">
+          <div class="leaderboard-card-head">
+            <h3>Top Players</h3>
+            <span id="modePill" class="mode-pill">Local Demo</span>
+          </div>
+          <ol id="globalLeaderboard" class="score-list"></ol>
+        </section>
+
+        <section class="leaderboard-card">
+          <div class="leaderboard-card-head">
+            <h3>Best By Game</h3>
+            <span class="tiny-copy">highest score per cabinet</span>
+          </div>
+          <div id="gameLeaderboard" class="game-score-grid"></div>
+        </section>
       </div>
     </section>
   </main>
 
-  <section class="info-band">
+  <footer class="footer">
     <div>
-      <p class="eyebrow">WHY IT FEELS FUN</p>
-      <h2>Fast loops, bright colors, no loading screens.</h2>
+      <strong>Arc World</strong>
+      <p>Retro browser chaos with fullscreen cabinets and leaderboard-ready scores.</p>
     </div>
-    <p>
-      This arcade is built as a lightweight static site, so it opens quickly and keeps the focus on instant play.
-    </p>
-  </section>
+    <p class="footer-note">Local scores work instantly. Public scores require shared backend config.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
