@@ -1,4 +1,4 @@
-# Pixel Rush Arcade
+# Arc World
 
 Retro mini-games in a lightweight static website.
 

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Arc World icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff4fd8" />
+      <stop offset="100%" stop-color="#6df7ff" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#120224" />
+  <rect x="8" y="8" width="112" height="112" rx="22" fill="url(#bg)" opacity="0.22" />
+  <path d="M64 18 105 40v48L64 110 23 88V40Z" fill="none" stroke="#ffd84d" stroke-width="8" />
+  <path d="M44 81 55 47h8l11 34h-8l-2-8H54l-2 8Zm12-15h6l-3-11Z" fill="#fff7da" />
+  <path d="M77 47h10c10 0 17 7 17 17s-7 17-17 17H77Zm8 7v20h2c5 0 9-3 9-10s-4-10-9-10Z" fill="#fff7da" />
+</svg>
