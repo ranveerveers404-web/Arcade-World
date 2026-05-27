@@ -1,0 +1,373 @@
+:root {
+  --bg: #120224;
+  --bg-alt: #20103f;
+  --panel: rgba(11, 13, 36, 0.82);
+  --panel-border: rgba(255, 255, 255, 0.12);
+  --text: #fff7da;
+  --muted: #c5b8ff;
+  --cyan: #6df7ff;
+  --pink: #ff4fd8;
+  --yellow: #ffd84d;
+  --lime: #8dff66;
+  --shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 79, 216, 0.18), transparent 28%),
+    radial-gradient(circle at 20% 20%, rgba(109, 247, 255, 0.15), transparent 24%),
+    linear-gradient(180deg, #1b0a35 0%, #090112 100%);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1));
+  pointer-events: none;
+}
+
+.page-glow {
+  position: fixed;
+  width: 36rem;
+  height: 36rem;
+  right: -10rem;
+  top: -12rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 216, 77, 0.24), transparent 60%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.hero,
+.arcade-grid,
+.info-band {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 1.5rem 0 2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand,
+.eyebrow,
+.panel-label,
+.pill-link,
+.primary-btn,
+.secondary-btn,
+.panel-btn {
+  font-family: "Press Start 2P", cursive;
+}
+
+.brand {
+  font-size: 0.95rem;
+  color: var(--yellow);
+  text-shadow: 0 0 12px rgba(255, 216, 77, 0.45);
+}
+
+.pill-link,
+.primary-btn,
+.secondary-btn,
+.panel-btn {
+  text-decoration: none;
+  color: var(--text);
+  border: 2px solid currentColor;
+  padding: 0.9rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.pill-link:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.panel-btn:hover {
+  transform: translateY(-2px);
+}
+
+.pill-link {
+  color: var(--cyan);
+}
+
+.hero-copy {
+  padding: 4rem 0 2.5rem;
+  max-width: 760px;
+  animation: rise-in 700ms ease;
+}
+
+.eyebrow,
+.panel-label {
+  color: var(--lime);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.intro,
+.feature-card p,
+.panel-foot,
+.info-band p {
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primary-btn {
+  color: var(--bg);
+  background: var(--yellow);
+  box-shadow: 0 0 24px rgba(255, 216, 77, 0.35);
+}
+
+.secondary-btn {
+  color: var(--pink);
+}
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-card,
+.game-panel,
+.info-band {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.feature-card {
+  padding: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -25% -55% auto;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(109, 247, 255, 0.22), transparent 62%);
+}
+
+.feature-icon {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--yellow);
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.75rem;
+}
+
+.arcade-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem 0 3rem;
+}
+
+.game-panel {
+  padding: 1rem;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.game-panel:hover,
+.game-panel:focus-within,
+.active-panel {
+  transform: translateY(-4px);
+  border-color: rgba(109, 247, 255, 0.8);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(109, 247, 255, 0.28);
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.panel-head h3 {
+  margin-top: 0.35rem;
+  font-size: 1.4rem;
+}
+
+.panel-btn {
+  color: var(--cyan);
+  font-size: 0.55rem;
+  padding: 0.8rem 0.9rem;
+}
+
+.touch-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.shooter-controls {
+  justify-content: space-between;
+}
+
+.touch-btn {
+  flex: 1;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.6rem;
+  padding: 0.9rem 0.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.touch-btn:active,
+.touch-btn.active-touch {
+  transform: translateY(2px);
+  background: rgba(109, 247, 255, 0.2);
+}
+
+.accent-btn {
+  color: var(--yellow);
+  border-color: rgba(255, 216, 77, 0.35);
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  background: #060611;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+.panel-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+.panel-foot p {
+  margin: 0;
+}
+
+.info-band {
+  margin-bottom: 3rem;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .feature-strip,
+  .arcade-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-band,
+  .panel-foot,
+  .touch-controls {
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero,
+  .arcade-grid,
+  .info-band {
+    width: min(1120px, calc(100% - 1rem));
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 11vw, 3rem);
+  }
+
+  .intro,
+  .feature-card p,
+  .panel-foot,
+  .info-band p {
+    font-size: 0.95rem;
+  }
+
+  .pill-link,
+  .primary-btn,
+  .secondary-btn,
+  .panel-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

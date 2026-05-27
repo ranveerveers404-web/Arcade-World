@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Rush Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-glow"></div>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">PIXEL RUSH</div>
+      <a class="pill-link" href="#arcade">Play Now</a>
+    </nav>
+
+    <div class="hero-copy">
+      <p class="eyebrow">RETRO WEB ARCADE</p>
+      <h1>Simple games.<br>Big arcade energy.</h1>
+      <p class="intro">
+        Jump into tiny browser classics inspired by old-school cabinets:
+        paddle battles, neon street dodging, and space blaster chaos.
+      </p>
+      <div class="hero-actions">
+        <a class="primary-btn" href="#arcade">Start Playing</a>
+        <a class="secondary-btn" href="#games">See Games</a>
+      </div>
+    </div>
+
+    <section class="feature-strip" id="games">
+      <article class="feature-card">
+        <span class="feature-icon">01</span>
+        <h2>Pong</h2>
+        <p>Bounce, rally, and outlast the CPU in a sharp little paddle duel.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">02</span>
+        <h2>Racing</h2>
+        <p>Weave between traffic in a simple endless racer with rising speed.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">03</span>
+        <h2>Shooter</h2>
+        <p>Blast falling invaders before they flood the bottom of the screen.</p>
+      </article>
+    </section>
+  </header>
+
+  <main id="arcade" class="arcade-grid">
+    <section class="game-panel active-panel" data-game="pong" tabindex="0">
+      <div class="panel-head">
+        <div>
+          <p class="panel-label">CABINET A</p>
+          <h3>Pong Duel</h3>
+        </div>
+        <button class="panel-btn" data-action="pong-reset">Reset</button>
+      </div>
+      <canvas id="pongCanvas" width="420" height="280" aria-label="Pong game area"></canvas>
+      <div class="touch-controls" aria-label="Pong touch controls">
+        <button class="touch-btn" data-touch-game="pong" data-key="w">Up</button>
+        <button class="touch-btn" data-touch-game="pong" data-key="s">Down</button>
+      </div>
+      <div class="panel-foot">
+        <p><strong>Controls:</strong> W and S or touch buttons</p>
+        <p id="pongStatus">First to 5 wins the set.</p>
+      </div>
+    </section>
+
+    <section class="game-panel" data-game="racing" tabindex="0">
+      <div class="panel-head">
+        <div>
+          <p class="panel-label">CABINET B</p>
+          <h3>Night Rider</h3>
+        </div>
+        <button class="panel-btn" data-action="racing-reset">Reset</button>
+      </div>
+      <canvas id="racingCanvas" width="420" height="280" aria-label="Racing game area"></canvas>
+      <div class="touch-controls" aria-label="Racing touch controls">
+        <button class="touch-btn" data-touch-game="racing" data-key="arrowleft">Left</button>
+        <button class="touch-btn" data-touch-game="racing" data-key="arrowright">Right</button>
+      </div>
+      <div class="panel-foot">
+        <p><strong>Controls:</strong> Arrow keys or touch buttons</p>
+        <p id="racingStatus">Dodge traffic and build distance.</p>
+      </div>
+    </section>
+
+    <section class="game-panel" data-game="shooter" tabindex="0">
+      <div class="panel-head">
+        <div>
+          <p class="panel-label">CABINET C</p>
+          <h3>Star Blaster</h3>
+        </div>
+        <button class="panel-btn" data-action="shooter-reset">Reset</button>
+      </div>
+      <canvas id="shooterCanvas" width="420" height="280" aria-label="Shooter game area"></canvas>
+      <div class="touch-controls shooter-controls" aria-label="Shooter touch controls">
+        <button class="touch-btn" data-touch-game="shooter" data-key="arrowleft">Left</button>
+        <button class="touch-btn accent-btn" data-touch-game="shooter" data-key=" ">Fire</button>
+        <button class="touch-btn" data-touch-game="shooter" data-key="arrowright">Right</button>
+      </div>
+      <div class="panel-foot">
+        <p><strong>Controls:</strong> Left, Right, Space or touch buttons</p>
+        <p id="shooterStatus">Clear waves before they reach the floor.</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="info-band">
+    <div>
+      <p class="eyebrow">WHY IT FEELS FUN</p>
+      <h2>Fast loops, bright colors, no loading screens.</h2>
+    </div>
+    <p>
+      This arcade is built as a lightweight static site, so it opens quickly and keeps the focus on instant play.
+    </p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
