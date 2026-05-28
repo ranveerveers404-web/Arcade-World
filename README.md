@@ -13,6 +13,7 @@ Arc World is a retro-inspired static arcade site with five browser games:
 - Fullscreen play for every cabinet
 - Keyboard and touch controls
 - Featured game cards and neon arcade landing page
+- Separate movies and TV watch section with official OTT links
 - Leaderboard UI with two modes:
   - Local demo mode with `localStorage`
   - Public shared mode using Supabase REST

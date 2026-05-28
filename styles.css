@@ -369,6 +369,7 @@ h1 {
 }
 
 .featured-section,
+.screening-section,
 .arcade-section,
 .leaderboard-section {
   padding: 2.4rem 0 0;
@@ -471,6 +472,117 @@ h1 {
 .why-strip article {
   padding: 1.2rem 1.25rem;
   border-radius: 22px;
+}
+
+.screening-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.screening-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 28px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.screening-art {
+  min-height: 260px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.hailmary-art {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 214, 77, 0.48), transparent 16%),
+    radial-gradient(circle at 52% 56%, rgba(88, 223, 255, 0.2), transparent 18%),
+    linear-gradient(180deg, rgba(8, 14, 33, 0.2), rgba(8, 14, 33, 0.92)),
+    linear-gradient(180deg, #0b1021, #1a0c29);
+}
+
+.rookie-art {
+  background:
+    linear-gradient(180deg, rgba(255, 122, 64, 0.34), transparent 20%),
+    radial-gradient(circle at 72% 30%, rgba(255, 79, 216, 0.3), transparent 18%),
+    linear-gradient(180deg, rgba(9, 18, 36, 0.22), rgba(9, 18, 36, 0.94)),
+    linear-gradient(180deg, #1d1025, #0a1222);
+}
+
+.screening-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.screening-type {
+  margin: 0;
+  color: var(--cyan);
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+}
+
+.screening-copy h3 {
+  margin-top: 0.55rem;
+  font-size: 1.7rem;
+}
+
+.screening-copy p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.ott-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.ott-pill,
+.ott-note {
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.78rem;
+}
+
+.ott-pill {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.prime-pill {
+  background: rgba(88, 223, 255, 0.12);
+  color: var(--cyan);
+}
+
+.hulu-pill {
+  background: rgba(169, 255, 98, 0.12);
+  color: var(--lime);
+}
+
+.abc-pill {
+  background: rgba(255, 79, 216, 0.12);
+  color: var(--pink-2);
+}
+
+.ott-note {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+}
+
+.screening-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .why-strip h3 {
@@ -751,6 +863,7 @@ canvas {
   .hero-grid,
   .leaderboard-grid,
   .featured-grid,
+  .screening-grid,
   .arcade-grid,
   .why-strip {
     grid-template-columns: 1fr;
@@ -778,11 +891,16 @@ canvas {
   .hero-actions,
   .stat-row,
   .touch-controls,
+  .screening-actions,
   .panel-head,
   .panel-actions,
   .panel-foot {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .screening-card {
+    grid-template-columns: 1fr;
   }
 
   .top-links {
