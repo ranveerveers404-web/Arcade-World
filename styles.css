@@ -480,6 +480,50 @@ h1 {
   gap: 1rem;
 }
 
+.cinema-banner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1rem;
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+  border-radius: 28px;
+  border: 1px solid var(--panel-border);
+  background:
+    radial-gradient(circle at 78% 26%, rgba(255, 79, 216, 0.22), transparent 18%),
+    radial-gradient(circle at 18% 10%, rgba(255, 214, 77, 0.16), transparent 16%),
+    linear-gradient(135deg, rgba(18, 14, 42, 0.96), rgba(10, 17, 39, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.cinema-banner-copy h3 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.cinema-banner-copy p {
+  max-width: 38rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.cinema-banner-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: end;
+  gap: 0.75rem;
+}
+
+.cinema-banner-meta span,
+.title-chip {
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
 .screening-card {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -530,6 +574,13 @@ h1 {
 .screening-copy h3 {
   margin-top: 0.55rem;
   font-size: 1.7rem;
+}
+
+.title-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
 }
 
 .screening-copy p {
@@ -864,6 +915,7 @@ canvas {
   .leaderboard-grid,
   .featured-grid,
   .screening-grid,
+  .cinema-banner,
   .arcade-grid,
   .why-strip {
     grid-template-columns: 1fr;
@@ -891,6 +943,7 @@ canvas {
   .hero-actions,
   .stat-row,
   .touch-controls,
+  .cinema-banner-meta,
   .screening-actions,
   .panel-head,
   .panel-actions,
