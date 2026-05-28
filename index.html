@@ -167,7 +167,33 @@
       <div class="screening-grid">
         <article class="screening-card screening-card-hailmary">
           <div class="screening-art" aria-hidden="true">
-            <img src="assets/project-hail-mary-poster.svg" alt="Project Hail Mary poster art">
+            <svg viewBox="0 0 800 1200" role="img" aria-label="Project Hail Mary stylized poster">
+              <defs>
+                <linearGradient id="hailmary-bg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#091120"/>
+                  <stop offset="100%" stop-color="#1a0a29"/>
+                </linearGradient>
+                <radialGradient id="hailmary-sun" cx="50%" cy="20%" r="20%">
+                  <stop offset="0%" stop-color="#ffe28a"/>
+                  <stop offset="100%" stop-color="rgba(255,226,138,0)"/>
+                </radialGradient>
+                <radialGradient id="hailmary-planet" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#63d8ff"/>
+                  <stop offset="100%" stop-color="rgba(99,216,255,0)"/>
+                </radialGradient>
+              </defs>
+              <rect width="800" height="1200" fill="url(#hailmary-bg)"/>
+              <circle cx="400" cy="220" r="140" fill="url(#hailmary-sun)"/>
+              <circle cx="310" cy="720" r="120" fill="url(#hailmary-planet)"/>
+              <circle cx="590" cy="530" r="12" fill="#fff"/>
+              <circle cx="620" cy="410" r="6" fill="#fff"/>
+              <circle cx="150" cy="300" r="8" fill="#fff"/>
+              <circle cx="680" cy="250" r="9" fill="#fff"/>
+              <path d="M420 860 505 1010 335 1010Z" fill="#dcecff"/>
+              <rect x="382" y="780" width="36" height="120" rx="12" fill="#dcecff"/>
+              <text x="68" y="1080" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="54" font-weight="700">PROJECT</text>
+              <text x="68" y="1140" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="54" font-weight="700">HAIL MARY</text>
+            </svg>
           </div>
           <div class="screening-copy">
             <p class="screening-type">MOVIE</p>
@@ -194,7 +220,30 @@
 
         <article class="screening-card screening-card-rookie">
           <div class="screening-art" aria-hidden="true">
-            <img src="assets/the-rookie-poster.svg" alt="The Rookie poster art">
+            <svg viewBox="0 0 800 1200" role="img" aria-label="The Rookie stylized poster">
+              <defs>
+                <linearGradient id="rookie-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4d2a2f"/>
+                  <stop offset="45%" stop-color="#18152f"/>
+                  <stop offset="100%" stop-color="#08172b"/>
+                </linearGradient>
+                <radialGradient id="rookie-sunset" cx="58%" cy="28%" r="18%">
+                  <stop offset="0%" stop-color="#ef7df2"/>
+                  <stop offset="100%" stop-color="rgba(239,125,242,0)"/>
+                </radialGradient>
+              </defs>
+              <rect width="800" height="1200" fill="url(#rookie-sky)"/>
+              <circle cx="420" cy="330" r="150" fill="url(#rookie-sunset)"/>
+              <rect x="0" y="900" width="800" height="300" fill="#07111f"/>
+              <rect x="120" y="770" width="120" height="330" rx="18" fill="#0b1f36"/>
+              <rect x="280" y="690" width="120" height="410" rx="18" fill="#0f2944"/>
+              <rect x="440" y="740" width="120" height="360" rx="18" fill="#10243f"/>
+              <rect x="600" y="650" width="110" height="450" rx="18" fill="#123152"/>
+              <rect x="360" y="850" width="80" height="250" rx="22" fill="#152a45"/>
+              <rect x="325" y="1075" width="150" height="28" rx="14" fill="#152a45"/>
+              <text x="64" y="1085" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="62" font-weight="700">THE</text>
+              <text x="64" y="1150" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="82" font-weight="700">ROOKIE</text>
+            </svg>
           </div>
           <div class="screening-copy">
             <p class="screening-type">TV SERIES</p>
@@ -223,8 +272,14 @@
 
       <div class="trailer-grid">
         <article class="trailer-card trailer-card-hailmary">
-          <div class="trailer-frame trailer-frame-hailmary" aria-hidden="true">
-            <div class="play-badge">Play Trailer</div>
+          <div class="trailer-frame">
+            <iframe
+              src="https://player.vimeo.com/video/1178986822"
+              title="Project Hail Mary trailer"
+              loading="lazy"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="trailer-copy">
             <p class="screening-type">OFFICIAL TRAILER</p>
@@ -237,8 +292,14 @@
         </article>
 
         <article class="trailer-card trailer-card-rookie">
-          <div class="trailer-frame trailer-frame-rookie" aria-hidden="true">
-            <div class="play-badge">Play Trailer</div>
+          <div class="trailer-frame">
+            <iframe
+              src="https://player.vimeo.com/video/1156061485"
+              title="The Rookie trailer"
+              loading="lazy"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="trailer-copy">
             <p class="screening-type">OFFICIAL TRAILER</p>
