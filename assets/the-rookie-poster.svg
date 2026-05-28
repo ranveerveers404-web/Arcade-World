@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-label="The Rookie stylized poster">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4d2a2f"/>
+      <stop offset="45%" stop-color="#18152f"/>
+      <stop offset="100%" stop-color="#08172b"/>
+    </linearGradient>
+    <radialGradient id="sunset" cx="58%" cy="28%" r="18%">
+      <stop offset="0%" stop-color="#ef7df2"/>
+      <stop offset="100%" stop-color="rgba(239,125,242,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#sky)"/>
+  <circle cx="420" cy="330" r="150" fill="url(#sunset)"/>
+  <rect x="0" y="900" width="800" height="300" fill="#07111f"/>
+  <rect x="120" y="770" width="120" height="330" rx="18" fill="#0b1f36"/>
+  <rect x="280" y="690" width="120" height="410" rx="18" fill="#0f2944"/>
+  <rect x="440" y="740" width="120" height="360" rx="18" fill="#10243f"/>
+  <rect x="600" y="650" width="110" height="450" rx="18" fill="#123152"/>
+  <rect x="360" y="850" width="80" height="250" rx="22" fill="#152a45"/>
+  <rect x="325" y="1075" width="150" height="28" rx="14" fill="#152a45"/>
+  <text x="64" y="1085" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="62" font-weight="700">THE</text>
+  <text x="64" y="1150" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="82" font-weight="700">ROOKIE</text>
+</svg>

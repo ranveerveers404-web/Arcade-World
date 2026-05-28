@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-label="Project Hail Mary stylized poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#091120"/>
+      <stop offset="100%" stop-color="#1a0a29"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="20%" r="20%">
+      <stop offset="0%" stop-color="#ffe28a"/>
+      <stop offset="100%" stop-color="rgba(255,226,138,0)"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#63d8ff"/>
+      <stop offset="100%" stop-color="rgba(99,216,255,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#bg)"/>
+  <circle cx="400" cy="220" r="140" fill="url(#sun)"/>
+  <circle cx="310" cy="720" r="120" fill="url(#planet)"/>
+  <circle cx="590" cy="530" r="12" fill="#fff"/>
+  <circle cx="620" cy="410" r="6" fill="#fff"/>
+  <circle cx="150" cy="300" r="8" fill="#fff"/>
+  <circle cx="680" cy="250" r="9" fill="#fff"/>
+  <path d="M420 860 505 1010 335 1010Z" fill="#dcecff"/>
+  <rect x="382" y="780" width="36" height="120" rx="12" fill="#dcecff"/>
+  <text x="68" y="1080" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="54" font-weight="700">PROJECT</text>
+  <text x="68" y="1140" fill="#ffffff" font-family="Orbitron, Arial, sans-serif" font-size="54" font-weight="700">HAIL MARY</text>
+</svg>
